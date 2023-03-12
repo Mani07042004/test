@@ -1,0 +1,603 @@
+*{
+ font-family: orbitan;
+}
+body
+{
+ background-color:white ;
+}
+.nav{
+ width:100%;
+ height:50px;
+ background-color:black;
+ border-radius:10px;
+ position:relative;
+ animation: nav 2s ease-in-out;
+}
+@keyframes nav{
+    0%{
+        transform: translateY(-100%);
+    }
+}
+.nav ul{
+ position:fixed;
+ left:0;
+ width:100%;
+ background-color:#10101E;
+ text-align:center;
+ padding:0;
+ top:44px;
+ left:-100%;
+ border-radius:50px;
+}
+.nav ul li{
+ display:block;
+ width:100%;
+ margin:0;
+}
+.nav ul.slide{
+ left:0;
+ transition:2s;
+}
+.nav li button{
+ border-radius: 5px;
+ border: none;
+ letter-spacing: 1px;
+ font-size: auto;
+ font-weight:bold;
+ color: rgb(0, 0, 0);
+ background-color: rgb(0, 100, 146);
+ padding: 5px 16px;
+ border: none;
+ outline: none;
+ transition: .4s ease-in;
+ box-shadow:0 0 4px white;
+ margin-right:10px;
+}
+.bar{
+ display:flex;
+ flex-direction:column;
+ float:left;
+ margin-top:13px;
+ margin-left:8px;
+}
+.bar .line{
+ width: 30px;
+ height: 6px;
+ background-color:  rgb(209, 154, 81);
+ margin-bottom:2px;
+}
+.head{
+  background-color: black;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 10px;
+  padding-bottom: 20px;
+  animation: head 2s ease-in-out;
+}
+@keyframes head{
+    0%{
+        transform: translatex(100%);
+    }
+}
+.head #board{
+  color: #ff0157;
+  font-family: orbitan;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+.head .morning{
+  background-color: rgb(54, 201, 255);
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+  padding-bottom: 100px;
+}
+.morning .agentname{
+  text-align: center;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 15px;
+}
+.morning #agentbook{
+        display: block;
+        text-align: center;
+    }
+    .morning #agentbook #helo{
+        background-color: #fa2070;
+        border-radius: 10px;
+        border: none;
+        padding: 8px 13px;
+        font-family: arial;
+        font-size: 15px;
+        box-shadow: 0 0 10px  #ff005d;
+    }
+    .morning .container{
+        background-color:black;
+        font-weight: normal;
+        position: fixed;
+        top: 49%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 300px;
+        height: 350px;
+        color: rgb(255, 255, 255);
+        border-radius: 8px;
+        border: none;
+        overflow: hidden;
+        display: none;
+    }
+    .container .close-btn{
+        position: absolute;
+        right: 15px;
+        top: 3px;
+        font-size: 20px;
+    }
+    .container div{
+        width: 280px;
+        position: absolute;
+    }
+    #FORM1{
+        display: flex;
+        flex-direction: column;
+    }
+    #FORM1 input[type=text]{
+        letter-spacing: 1px;
+        width: 200px;
+        height: 35px;
+        text-align: center;
+        margin-top: 15px;
+        margin-left: 45px;
+        font-family: arial;
+        font-weight: bold;
+        border-radius: 10px;
+        border: none;
+        text-transform: uppercase;
+        background-color: #ffffff;
+    }
+    #FORM1 input[type=password]{
+        letter-spacing: 1px;
+        width: 200px;
+        height: 35px;
+        text-align: center;
+        margin-top: 15px;
+        margin-left: 45px;
+        font-family: arial;
+        font-weight: bold;
+        border-radius: 10px;
+        border: none;
+        text-transform: uppercase;
+        background-color: #ffffff;
+    }
+    #FORM1 select{
+        letter-spacing: 1px;
+        width: 205px;
+        height: 35px;
+        text-align: center;
+        margin-top: 15px;
+        margin-left: 45px;
+        font-family: arial;
+        font-weight: bold;
+        border-radius: 10px;
+        border: none;
+        text-transform: uppercase;
+        background-color: #ffffff;
+    }
+    #FORM1 button{
+        letter-spacing: 1px;
+        margin-left: 100px;
+        margin-right: 95px;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 10px;
+        font-family: arial;
+        font-weight: bold;
+        color: black;
+        font-size: 13px;
+        box-shadow: 0 0 7px rgb(255, 255, 255);
+        background-image: linear-gradient(to right,rgb(8, 101, 8),rgb(23, 208, 23));
+        border: none;
+    }
+    #FORM2{
+        left: 600px;
+        display: flex;
+        flex-direction: column;
+    }
+    #FORM2 input[type=text]{
+        letter-spacing: 1px;
+        width: 200px;
+        height: 35px;
+        text-align: center;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-family: arial;
+        font-weight: bold;
+        border-radius: 10px;
+        border: none;
+        text-transform: uppercase;
+        background-color: #ffffff;
+    }
+    #FORM2 input[type=date]{
+        width: 200px;
+        height: 35px;
+        text-align: center;
+        margin-left: 10px;
+        margin-top: 3px;
+        font-family: arial;
+        font-weight: bold;
+        border-radius: 10px;
+        border: none;
+        text-transform: uppercase;
+        cursor: pointer;
+        background-color: #ffffff;
+        letter-spacing: 2px;
+    }
+    ::-webkit-calendar-picker-indicator{
+        background-color: #866fee;
+        padding: 5px;
+        margin-right: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #FORM2 button{
+        letter-spacing: 1px;
+        margin-top: 6px;
+        padding: 10px;
+        border-radius: 10px;
+        font-family: arial;
+        font-weight: bold;
+        color: black;
+        font-size: 13px;
+        box-shadow: 0 0 7px rgb(255, 255, 255);
+        background-image: linear-gradient(to right,rgb(8, 101, 8),rgb(23, 208, 23));
+        border: none;
+    }
+    #FORM3{
+        left: 600px;
+        display: flex;
+        flex-direction: column;
+    }
+    #FORM3 button{
+        letter-spacing: 1px;
+        margin-left: 30px;
+        margin-top: 233px;
+        padding: 9px;
+        border-radius: 10px;
+        font-family: arial;
+        font-weight: bold;
+        color: black;
+        font-size: 13px;
+        box-shadow: 0 0 7px rgb(255, 255, 255);
+        background-image: linear-gradient(to right,rgb(8, 101, 8),rgb(23, 208, 23));
+        border: none;
+    }
+    #FORM3 .MA1{
+        margin-top: 58px;
+        width: 240px;
+        height: 123px;
+        background-color: white;
+        border-radius: 5px;
+        color: black;
+    }
+    #FORM3 .MA2{
+        margin-top: 183px;
+        width: 240px;
+        height: 123px;
+        background-color: white;
+        border-radius: 5px;
+        color: black;
+    }
+    #FORM3 #m1 {
+        accent-color: red;
+        width: 15px;
+        height: 10px;
+        margin-top: 2px;
+    }
+    #FORM3 #m2 {
+            accent-color: red;
+            width: 15px;
+            height: 10px;
+            margin-top: 2px;
+        }
+    #FORM3 .MA1 input[type=checkbox]{
+        margin-top: 7px;
+        width: 30px;
+        height: 15px;
+    }
+    #FORM3 .MA2 input[type=checkbox]{
+        margin-top: 7px;
+        width: 30px;
+        height: 15px;
+    }
+    #FORM4{
+        left: 600px;
+        display: flex;
+        flex-direction: column;
+    }
+    #FORM4 select{
+        letter-spacing: 1px;
+        width: 200px;
+        height: 35px;
+        margin-bottom: 10px;
+        text-align: center;
+        margin-left: 10px;
+        font-family: arial;
+        font-weight: bold;
+        border-radius: 10px;
+        border: none;
+        text-transform: uppercase;
+        background-color: #ffffff;
+    }
+    #FORM4 button{
+        letter-spacing: 1px;
+        margin-left: 10px;
+        padding: 9px;
+        border-radius: 10px;
+        font-family: arial;
+        font-weight: bold;
+        color: black;
+        font-size: 13px;
+        box-shadow: 0 0 7px rgb(255, 255, 255);
+        background-image: linear-gradient(to right,rgb(8, 101, 8),rgb(23, 208, 23));
+        border: none;
+    }
+
+
+
+.head .evening{
+  background-color: rgb(54, 201, 255);
+  margin-left: 10px;
+  margin-top:10px;
+  margin-right: 10px;
+  border-radius: 4px;
+  padding-bottom: 100px;
+}
+.evening .agentname{
+  text-align: center;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 15px;
+}
+.evening #agentbook1{
+        display: block;
+        text-align: center;
+    }
+    .evening #agentbook1 #helo1{
+        background-color: #fa2070;
+        border-radius: 10px;
+        border: none;
+        padding: 8px 13px;
+        font-family: arial;
+        font-size: 15px;
+        box-shadow: 0 0 10px  #ff005d;
+    }
+    .evening .container1{
+        background-color:black;
+        font-weight: normal;
+        position: fixed;
+        top: 49%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 300px;
+        height: 350px;
+        color: rgb(255, 255, 255);
+        border-radius: 8px;
+        border: none;
+        overflow: hidden;
+        display: none;
+    }
+    .container1 .close-btn1{
+        position: absolute;
+        right: 15px;
+        top: 3px;
+        font-size: 20px;
+    }
+    .container1 div{
+        width: 280px;
+        position: absolute;
+    }
+    #FORM11{
+        display: flex;
+        flex-direction: column;
+    }
+    #FORM11 input[type=text]{
+        letter-spacing: 1px;
+        width: 200px;
+        height: 35px;
+        text-align: center;
+        margin-top: 15px;
+        margin-left: 45px;
+        font-family: arial;
+        font-weight: bold;
+        border-radius: 10px;
+        border: none;
+        text-transform: uppercase;
+        background-color: #ffffff;
+    }
+    #FORM11 input[type=password]{
+        letter-spacing: 1px;
+        width: 200px;
+        height: 35px;
+        text-align: center;
+        margin-top: 15px;
+        margin-left: 45px;
+        font-family: arial;
+        font-weight: bold;
+        border-radius: 10px;
+        border: none;
+        text-transform: uppercase;
+        background-color: #ffffff;
+    }
+    #FORM11 select{
+        letter-spacing: 1px;
+        width: 205px;
+        height: 35px;
+        text-align: center;
+        margin-top: 15px;
+        margin-left: 45px;
+        font-family: arial;
+        font-weight: bold;
+        border-radius: 10px;
+        border: none;
+        text-transform: uppercase;
+        background-color: #ffffff;
+    }
+    #FORM11 button{
+        letter-spacing: 1px;
+        margin-left: 100px;
+        margin-right: 95px;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 10px;
+        font-family: arial;
+        font-weight: bold;
+        color: black;
+        font-size: 13px;
+        box-shadow: 0 0 7px rgb(255, 255, 255);
+        background-image: linear-gradient(to right,rgb(8, 101, 8),rgb(23, 208, 23));
+        border: none;
+    }
+    #FORM12{
+        left: 600px;
+        display: flex;
+        flex-direction: column;
+    }
+    #FORM12 input[type=text]{
+        letter-spacing: 1px;
+        width: 200px;
+        height: 35px;
+        text-align: center;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-family: arial;
+        font-weight: bold;
+        border-radius: 10px;
+        border: none;
+        text-transform: uppercase;
+        background-color: #ffffff;
+    }
+    #FORM12 input[type=date]{
+        width: 200px;
+        height: 35px;
+        text-align: center;
+        margin-left: 10px;
+        margin-top: 3px;
+        font-family: arial;
+        font-weight: bold;
+        border-radius: 10px;
+        border: none;
+        text-transform: uppercase;
+        cursor: pointer;
+        background-color: #ffffff;
+        letter-spacing: 2px;
+    }
+    ::-webkit-calendar-picker-indicator{
+        background-color: #866fee;
+        padding: 5px;
+        margin-right: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #FORM12 button{
+        letter-spacing: 1px;
+        margin-top: 6px;
+        padding: 10px;
+        border-radius: 10px;
+        font-family: arial;
+        font-weight: bold;
+        color: black;
+        font-size: 13px;
+        box-shadow: 0 0 7px rgb(255, 255, 255);
+        background-image: linear-gradient(to right,rgb(8, 101, 8),rgb(23, 208, 23));
+        border: none;
+    }
+    #FORM13{
+        left: 600px;
+        display: flex;
+        flex-direction: column;
+    }
+    #FORM13 button{
+        letter-spacing: 1px;
+        margin-left: 30px;
+        margin-top: 233px;
+        padding: 9px;
+        border-radius: 10px;
+        font-family: arial;
+        font-weight: bold;
+        color: black;
+        font-size: 13px;
+        box-shadow: 0 0 7px rgb(255, 255, 255);
+        background-image: linear-gradient(to right,rgb(8, 101, 8),rgb(23, 208, 23));
+        border: none;
+    }
+    #FORM13 .MA1{
+        margin-top: 58px;
+        width: 240px;
+        height: 123px;
+        background-color: white;
+        border-radius: 5px;
+        color: black;
+    }
+    #FORM13 .MA2{
+        margin-top: 183px;
+        width: 240px;
+        height: 123px;
+        background-color: white;
+        border-radius: 5px;
+        color: black;
+    }
+    #FORM13 #m1 {
+        accent-color: red;
+        width: 15px;
+        height: 10px;
+        margin-top: 2px;
+    }
+    #FORM13 #m2 {
+            accent-color: red;
+            width: 15px;
+            height: 10px;
+            margin-top: 2px;
+        }
+    #FORM13 .MA1 input[type=checkbox]{
+        margin-top: 7px;
+        width: 30px;
+        height: 15px;
+    }
+    #FORM13 .MA2 input[type=checkbox]{
+        margin-top: 7px;
+        width: 30px;
+        height: 15px;
+    }
+    #FORM14{
+        left: 600px;
+        display: flex;
+        flex-direction: column;
+    }
+    #FORM14 select{
+        letter-spacing: 1px;
+        width: 200px;
+        height: 35px;
+        margin-bottom: 10px;
+        text-align: center;
+        margin-left: 10px;
+        font-family: arial;
+        font-weight: bold;
+        border-radius: 10px;
+        border: none;
+        text-transform: uppercase;
+        background-color: #ffffff;
+    }
+    #FORM14 button{
+        letter-spacing: 1px;
+        margin-left: 10px;
+        padding: 9px;
+        border-radius: 10px;
+        font-family: arial;
+        font-weight: bold;
+        color: black;
+        font-size: 13px;
+        box-shadow: 0 0 7px rgb(255, 255, 255);
+        background-image: linear-gradient(to right,rgb(8, 101, 8),rgb(23, 208, 23));
+        border: none;
+    }
+
